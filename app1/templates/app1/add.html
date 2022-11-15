@@ -1,0 +1,11 @@
+<html>
+<head></head>
+<body>
+<h2>Add new students</h2>
+<form method='post'>
+    {% csrf_token %}
+    {{form}}
+    <input type="submit" value = "submit">
+</form>
+</body>
+</html>

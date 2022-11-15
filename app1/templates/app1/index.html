@@ -1,0 +1,21 @@
+<html>
+<head></head>
+<body>
+    <h1>Students lists</h1>
+    <table border="1">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        {% for x in student %}
+        <tr>
+        <td><a href="{% url 'detail' x.id %}">{{ x.id }}</a></td>
+        <td><a href="{% url 'detail' x.id %}">{{ x.name }}</a></td>
+        <td><a href="{% url 'detail' x.id %}">{{ x.age }}</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <h2><a href="{% url 'add' %}">Add new Students ?</a></h2>
+</body>
+</html>
